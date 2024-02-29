@@ -66,6 +66,7 @@ namespace AppSettings
     BoolSetting ShowMSAAMask;
     BoolSetting ShowUVGradients;
     BoolSetting AnimateLightIntensity;
+    IntSetting FrameDelayMillis;
 
     ConstantBuffer CBuffer;
     const uint32 CBufferRegister = 12;
@@ -186,6 +187,9 @@ namespace AppSettings
         AnimateLightIntensity.Initialize("AnimateLightIntensity", "Debug", "Animate Light Intensity", "Modulates the light intensity to test buffer uploads", false);
         Settings.AddSetting(&AnimateLightIntensity);
 
+        FrameDelayMillis.Initialize("FrameDelayMillis", "Debug", "Frame Delay ms", "Frame Delay for Debugging", 0, 0, 100);
+        Settings.AddSetting(&FrameDelayMillis);
+
         ConstantBufferInit cbInit;
         cbInit.Size = sizeof(AppSettingsCBuffer);
         cbInit.Dynamic = true;
@@ -222,6 +226,7 @@ namespace AppSettings
         cbData.ShowMSAAMask = ShowMSAAMask;
         cbData.ShowUVGradients = ShowUVGradients;
         cbData.AnimateLightIntensity = AnimateLightIntensity;
+        cbData.FrameDelayMillis = FrameDelayMillis;
 
         CBuffer.MapAndSetData(cbData);
     }

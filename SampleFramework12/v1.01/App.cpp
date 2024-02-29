@@ -260,6 +260,7 @@ void App::Render_Internal()
     swapChain.EndFrame();
 
     DX12::EndFrame(swapChain.D3DSwapChain(), swapChain.NumVSYNCIntervals());
+
 }
 
 void App::BeforeReset_Internal()

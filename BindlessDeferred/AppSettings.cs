@@ -217,5 +217,11 @@ public class Settings
         [HelpText("Modulates the light intensity to test buffer uploads")]
         [DisplayName("Animate Light Intensity")]
         bool AnimateLightIntensity = false;
+
+        [HelpText("Frame Delay for Debugging")]
+        [MinValue(0)]
+        [MaxValue(100)]
+        [DisplayName("Frame Delay ms")]
+        int FrameDelayMillis = 0;
     }
 }

@@ -1350,6 +1350,8 @@ void BindlessDeferred::Render(const Timer& timer)
     DX12::SetViewport(cmdList, swapChain.Width(), swapChain.Height());
 
     RenderHUD(timer);
+
+    Sleep(AppSettings::FrameDelayMillis);
 }
 
 void BindlessDeferred::UpdateDecals(const Timer& timer)

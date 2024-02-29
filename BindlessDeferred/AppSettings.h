@@ -98,6 +98,7 @@ namespace AppSettings
     extern BoolSetting ShowMSAAMask;
     extern BoolSetting ShowUVGradients;
     extern BoolSetting AnimateLightIntensity;
+    extern IntSetting FrameDelayMillis;
 
     struct AppSettingsCBuffer
     {
@@ -121,6 +122,7 @@ namespace AppSettings
         bool32 ShowMSAAMask;
         bool32 ShowUVGradients;
         bool32 AnimateLightIntensity;
+        int32 FrameDelayMillis;
     };
 
     extern ConstantBuffer CBuffer;
