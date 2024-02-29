@@ -204,7 +204,7 @@ static bool SphereConeIntersection(const Float3& coneTip, const Float3& coneDir,
     return e < sphereRadius;
 }
 
-BindlessDeferred::BindlessDeferred(const wchar* cmdLine) : App(L"Bindless Deferred Texturing", cmdLine)
+BindlessDeferred::BindlessDeferred(const wchar* cmdLine) : App(L"Bindless Deferred Texturing 2022", cmdLine)
 {
     minFeatureLevel = D3D_FEATURE_LEVEL_11_1;
     globalHelpText = "Bindless Deferred Texturing\n\n"
